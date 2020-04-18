@@ -2,7 +2,7 @@
 Scroll down Detection in Jquery for all devices
 
 
-## Add this function into Jquery document ready body. 
+## Add this function into Jquery document ready body (This script no work for Windows EDGE Browser). 
 
 ```
 
@@ -21,5 +21,24 @@ window.onscroll = function() {
   }
 }
 ```
+## Working edge browser script but it not work for other browser.
+
+```
+function getDocumentHeight() {
+return Math.max(
+    Math.max(document.body.scrollHeight, document.documentElement.scrollHeight),
+    Math.max(document.body.offsetHeight, document.documentElement.offsetHeight),
+    Math.max(document.body.clientHeight, document.documentElement.clientHeight)
+);
+}
+$(window).scroll(function() {
+     var docHeight = getDocumentHeight();
+     if($(window).scrollTop() + window.innerHeight == docHeight)
+                 {
+                  alert('at the bottom');
+                 }
+        });
+```
+
 
 )- **Thank you** -(
