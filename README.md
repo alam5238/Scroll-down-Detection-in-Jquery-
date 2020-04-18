@@ -2,7 +2,7 @@
 Scroll down Detection in Jquery for all devices
 
 
-## Add this function into Jquery document ready body (This script no work for Windows EDGE Browser). 
+## Add this function into Jquery document ready body (This script not work for Windows EDGE Browser & Mobile Phones). 
 
 ```
 
@@ -42,4 +42,17 @@ $(window).scroll(function() {
 
 ## please add `<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">` in `<head>` section of your webpage.
 
+
+## This script work for all devices :D 
+
+```
+$(window).scroll(function(){
+        if($(window).scrollTop() + $(window).height() > $(document).height() - 100) {
+            $('.s3cc-fixed').css('position','static');
+            alert();
+        }else{
+            $('.s3cc-fixed').css('position','fixed');
+        }
+    });
+```
 )- **Thank you** -(
